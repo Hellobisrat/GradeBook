@@ -16,7 +16,7 @@ function saveLastGrade() {
 }
 
 function renderLastGrade() {
-  var lastGrade = JSON.parse(localStorage.getItem)
+  var lastGrade = JSON.parse(localStorage.getItem("studentGrade"))
 
   if(lastGrade !== null) {
     document.getElementById('saved-name').innerHTML =lastGrade.student
@@ -30,7 +30,7 @@ function renderLastGrade() {
 } 
 
 
-saveButton.addEventListener('click',function(event){
+saveButton.addEventListener("click",function(event){
   event.preventDefault();
   saveLastGrade();
   renderLastGrade()
